@@ -72,3 +72,10 @@ fig <- plot_ly(
 
 fig
 
+'superficie 3d'
+
+x <- -40:40 
+y <- -40:40
+z <- outer(x,y, function(x,y){x+y+x*y/10}) 
+fig <- plot_ly(x = ~x, y = ~y, z = ~z, type = 'surface') ; fig
+
